@@ -38,45 +38,51 @@ export const workflowSteps = [
 export const packages = [
   {
     eyebrow: "Acquisition",
-    name: "Digital Presence",
-    body: "Attract and convert high-value guests with a modern booking experience.",
-    price: "From $1,200",
-    cta: "See System",
-    featured: false,
+    name: "Guest Acquisition System",
+    body: "For hotels and villas that want stronger visibility, direct inquiries, and faster guest communication.",
+    price: "Starting From $1,200+",
+    cta: "View Acquisition Flow",
     features: [
-      "Custom Website Design",
-      "Booking Engine Integration",
-      "WhatsApp Inquiry Setup",
-      "Basic Social Media Templates"
+      "Hospitality website",
+      "Mobile-first booking experience",
+      "WhatsApp inquiry integration",
+      "Automated inquiry workflows",
+      "Direct inquiry flows",
+      "Initial campaign creatives",
+      "Conversion-focused landing experience"
     ]
   },
   {
     eyebrow: "Operations",
-    name: "Guest Operations",
-    body: "Centralize communication and elevate on-property service delivery.",
-    price: "From $2,000",
+    name: "Guest Operations System",
+    body: "For hospitality teams managing growing guest communication and operational coordination.",
+    price: "Starting From $2,000+",
     cta: "View Workflow",
-    featured: true,
     features: [
-      "Zeylun Hub Setup",
-      "Staff Device Configuration",
-      "Automated Guest Messaging",
-      "Department Workflows (Dining, Spa)"
+      "Guest request management",
+      "Housekeeping workflows",
+      "Spa/service coordination",
+      "WhatsApp communication workflows",
+      "Staff coordination dashboard",
+      "Internal notifications",
+      "Request tracking",
+      "Operational analytics"
     ]
   },
   {
-    eyebrow: "Comprehensive",
-    name: "Full Ecosystem",
-    body: "The complete digital transformation for luxury hospitality properties.",
-    price: "From $5,000",
-    cta: "See System",
-    featured: false,
+    eyebrow: "Ecosystem",
+    name: "Hospitality Operations Ecosystem",
+    body: "For hospitality brands that want guest acquisition, communication, and operations connected into one ecosystem.",
+    price: "Starting From $5,000+",
+    cta: "Explore Ecosystem",
     features: [
-      "Everything in Acquisition",
-      "Everything in Operations",
+      "Everything in Guest Acquisition System",
+      "Everything in Guest Operations System",
       "Advanced operational workflows",
       "Multi-service coordination",
-      "Integrated guest journey workflows"
+      "Integrated guest journey workflows",
+      "Analytics & operational visibility",
+      "Scalable communication systems"
     ]
   }
 ];

@@ -1,8 +1,44 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { navItems } from "@/lib/content";
 import { PaperPlaneIcon } from "@/components/ui/Button";
 
 export function Header() {
+  const [activeSection, setActiveSection] = useState(navItems[0].href);
+
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    if (sections.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target.id) {
+          setActiveSection(`#${visibleEntry.target.id}`);
+        }
+      },
+      {
+        rootMargin: "-35% 0px -50% 0px",
+        threshold: [0.12, 0.25, 0.5]
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-surface-container-highest bg-background/80 backdrop-blur-md">
       <nav
@@ -17,8 +53,9 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
+              onClick={() => setActiveSection(item.href)}
               className={`text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
-                index === 0
+                activeSection === item.href || (index === 0 && activeSection === "")
                   ? "border-b-2 border-secondary pb-1 text-secondary"
                   : "text-on-surface-variant hover:text-primary"
               }`}
