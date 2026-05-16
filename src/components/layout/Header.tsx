@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/content";
 import { PaperPlaneIcon } from "@/components/ui/Button";
 
 export function Header() {
   const [activeSection, setActiveSection] = useState(navItems[0].href);
+  const pathname = usePathname();
 
   useEffect(() => {
     const sectionIds = navItems.map((item) => item.href.replace("#", ""));
@@ -45,14 +47,14 @@ export function Header() {
         className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 md:px-10"
         aria-label="Main navigation"
       >
-        <Link href="#" className="font-serif text-[24px] font-semibold leading-[1.3] tracking-[-0.01em] text-primary md:text-[32px]">
+        <Link href="/" className="font-serif text-[24px] font-semibold leading-[1.3] tracking-[-0.01em] text-primary md:text-[32px]">
           Zeylun
         </Link>
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item, index) => (
             <Link
               key={item.label}
-              href={item.href}
+              href={pathname === "/" ? item.href : `/${item.href}`}
               onClick={() => setActiveSection(item.href)}
               className={`text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
                 activeSection === item.href || (index === 0 && activeSection === "")

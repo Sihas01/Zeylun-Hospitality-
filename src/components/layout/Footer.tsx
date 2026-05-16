@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-[#1c1c1a] py-16 text-[#f3f0ec] md:py-20">
       <div className="container-shell grid gap-12 md:grid-cols-12">
         <div className="md:col-span-7">
-          <Link href="#" className="font-serif text-3xl font-semibold">
+          <Link href="/" className="font-serif text-3xl font-semibold">
             Zeylun
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-6 text-white/62">
@@ -36,10 +36,10 @@ export function Footer() {
             <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">
               Legal
             </h2>
-            <Link href="#" className="text-sm text-white/72 transition-colors hover:text-white">
+            <Link href="/privacy-policy" className="text-sm text-white/72 transition-colors hover:text-white">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-white/72 transition-colors hover:text-white">
+            <Link href="/terms-of-service" className="text-sm text-white/72 transition-colors hover:text-white">
               Terms of Service
             </Link>
           </div>
