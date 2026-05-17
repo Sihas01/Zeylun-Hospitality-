@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Zeylun",
+  title: "Terms of Service",
   description:
-    "Terms for Zeylun hospitality operations, guest communication systems, implementation work, and support."
+    "Terms for Zeylun Hospitality Systems guest acquisition, hospitality operations, guest communication systems, implementation work, and support.",
+  alternates: {
+    canonical: "/terms-of-service"
+  }
 };
 
 const sections = [

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Zeylun",
+  title: "Privacy Policy",
   description:
-    "How Zeylun handles information, communication data, cookies, analytics, and guest operations privacy."
+    "How Zeylun Hospitality Systems handles information, communication data, cookies, analytics, and guest operations privacy.",
+  alternates: {
+    canonical: "/privacy-policy"
+  }
 };
 
 const sections = [

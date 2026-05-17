@@ -71,7 +71,7 @@ export function PackagesSection() {
                   ))}
                 </ul>
                 <a
-                  href="#contact"
+                  href={index === 0 ? "/packages/guest-acquisition-system" : "#contact"}
                   className="inline-flex h-12 items-center justify-center border border-secondary px-5 text-xs font-semibold uppercase tracking-[0.14em] text-secondary transition duration-300 hover:bg-secondary/5"
                 >
                   {item.cta}

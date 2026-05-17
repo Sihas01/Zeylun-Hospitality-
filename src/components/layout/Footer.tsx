@@ -13,6 +13,12 @@ export function Footer() {
             Elevating hospitality operations through intelligent, centralized workflows
             for high-end properties.
           </p>
+          <Link
+            href="mailto:hello@zeylun.com"
+            className="mt-5 inline-flex text-sm text-white/72 transition-colors hover:text-white"
+          >
+            hello@zeylun.com
+          </Link>
           <p className="mt-10 text-xs font-semibold uppercase tracking-[0.16em] text-white/38">
             Copyright 2026 Zeylun Hospitality Systems.
           </p>
@@ -25,7 +31,7 @@ export function Footer() {
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                href={item.href}
+                href={`/${item.href}`}
                 className="text-sm text-white/72 transition-colors hover:text-white"
               >
                 {item.label}

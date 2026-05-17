@@ -5,9 +5,14 @@ export const navItems = [
   { label: "Contact", href: "#contact" }
 ];
 
+export const whatsAppHref =
+  "https://wa.me/94740311733?text=Hi%20Zeylun%2C%20I%27d%20like%20to%20discuss%20a%20hospitality%20workflow%20for%20my%20property.";
+
 export const images = {
   hero: "/images/zeylun-hero-hospitality.png",
   acquisition: "/images/zeylun-guest-acquisition.png",
+  acquisitionDetailHero: "/images/zeylun-guest-acquisition-detail-hero.png",
+  campaignLaunchSupport: "/images/zeylun-campaign-launch-support.png",
   workflow: "/images/zeylun-operational-layer.png",
   motion:
     "https://lh3.googleusercontent.com/aida/ADBb0uhNWk9j63ZorrDDwCDw95D4ZgpJJ0EgMTDAg8tq1zZAmw7l6WHK2KbGEtm5z3C8-6FNN7rYTBVaeBAttlrH5H4QijngCif8v50CrmmSfZMBJVOiTZ4Xu59BcAuAxSf8PxvTCKhgz4ymtna77B6cFXhh9TS3nsdNa61GDBFoWBa9ZioWqeCvz49hVuCB8pkvSmsx3o4OhWdJg-OXLLJOo8a5634JsqNLuccSJeu4jDMveUqnAxtbcldl8lY"

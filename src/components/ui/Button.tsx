@@ -31,10 +31,13 @@ export function Button({
     variant === "primary"
       ? "kite-button bg-primary-container text-on-primary shadow-tactile hover:-translate-y-0.5 hover:shadow-floating"
       : "border border-secondary text-secondary hover:-translate-y-0.5 hover:bg-secondary/5";
+  const isExternal = href.startsWith("http");
 
   return (
     <Link
       href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`inline-flex h-12 items-center justify-center rounded-lg px-7 text-sm font-semibold uppercase tracking-[0.08em] transition duration-300 ${styles} ${className}`}
     >
       <span>{children}</span>

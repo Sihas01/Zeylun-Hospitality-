@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { navItems } from "@/lib/content";
+import { navItems, whatsAppHref } from "@/lib/content";
 import { PaperPlaneIcon } from "@/components/ui/Button";
 
 export function Header() {
@@ -67,14 +67,18 @@ export function Header() {
           ))}
         </div>
         <Link
-          href="#contact"
+          href={whatsAppHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="kite-button hidden h-12 items-center justify-center rounded-lg bg-primary-container px-6 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 md:inline-flex"
         >
           <span>Schedule a Call</span>
           <PaperPlaneIcon />
         </Link>
         <Link
-          href="#contact"
+          href={whatsAppHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="kite-button inline-flex h-10 items-center justify-center rounded-lg bg-primary-container px-4 text-xs font-semibold text-on-primary transition-opacity hover:opacity-90 md:hidden"
         >
           <span>Schedule a Call</span>

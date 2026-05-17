@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { images } from "@/lib/content";
+import { images, whatsAppHref } from "@/lib/content";
 import { PaperPlaneIcon } from "@/components/ui/Button";
 
 const MotionLink = motion.create(Link);
@@ -77,7 +77,9 @@ export function HeroSection() {
             transition={{ ...contentTransition, delay: 0.54 }}
           >
             <MotionLink
-              href="#contact"
+              href={whatsAppHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="kite-button inline-flex h-12 items-center justify-center rounded-lg bg-primary-container px-8 text-sm font-semibold text-on-primary shadow-tactile transition-opacity hover:opacity-90"
               whileHover={reduceMotion ? undefined : { y: -2 }}
               whileTap={reduceMotion ? undefined : { y: 0 }}

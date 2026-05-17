@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
+import { whatsAppHref } from "@/lib/content";
 
 export function FinalCtaSection() {
   const reduceMotion = useReducedMotion();
@@ -47,7 +48,7 @@ export function FinalCtaSection() {
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.26 }}
           >
-            <Button href="mailto:hello@zeylun.com" className="h-14 px-9">
+            <Button href={whatsAppHref} className="h-14 px-9">
               Schedule a Consultation
             </Button>
           </motion.div>
